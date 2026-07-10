@@ -1,4 +1,49 @@
-/* App-specific glassmorphic styles and grids */
+/* Hide default cursor on desktop */
+@media (min-width: 768px) {
+  body, a, button, select, input, [role="button"], textarea {
+    cursor: none !important;
+  }
+}
+
+/* Custom cursor elements */
+.custom-cursor-dot {
+  width: 6px;
+  height: 6px;
+  background-color: var(--accent-cyan);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9999;
+  transition: width 0.2s, height 0.2s, background-color 0.2s;
+}
+
+.custom-cursor-ring {
+  width: 32px;
+  height: 32px;
+  border: 1.5px solid var(--accent-purple);
+  border-radius: 50%;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  z-index: 9998;
+  transition: width 0.2s, height 0.2s, border-color 0.2s;
+  box-shadow: 0 0 8px rgba(192, 132, 252, 0.25);
+}
+
+/* Hover state styles for interactive components */
+.custom-cursor-dot.hovered {
+  width: 10px;
+  height: 10px;
+  background-color: var(--accent-green);
+}
+
+.custom-cursor-ring.hovered {
+  width: 44px;
+  height: 44px;
+  border-color: var(--accent-green);
+  box-shadow: 0 0 16px rgba(16, 185, 129, 0.4);
+}
 
 .app-container {
   display: flex;

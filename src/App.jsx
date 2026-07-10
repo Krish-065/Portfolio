@@ -62,6 +62,19 @@ function NeuralBackground() {
       
       // Update and draw particles
       particles.forEach((p) => {
+        // Apply magnetic attraction to mouse if mouse is close
+        if (mouseRef.current.x !== null) {
+          const dx = mouseRef.current.x - p.x;
+          const dy = mouseRef.current.y - p.y;
+          const dist = Math.sqrt(dx * dx + dy * dy);
+          if (dist < 180) {
+            const force = (180 - dist) / 180;
+            const strength = 0.22;
+            p.x += (dx / dist) * force * strength;
+            p.y += (dy / dist) * force * strength;
+          }
+        }
+
         p.x += p.vx;
         p.y += p.vy;
 
@@ -125,6 +138,75 @@ function NeuralBackground() {
   }, []);
 
   return <canvas ref={canvasRef} className="neural-canvas" />;
+}
+
+// ----------------------------------------------------
+// Custom Trailing Cursor Tracker Component
+// ----------------------------------------------------
+function CustomCursor() {
+  const [position, setPosition] = useState({ x: -100, y: -100 });
+  const [ringPosition, setRingPosition] = useState({ x: -100, y: -100 });
+  const [isHovered, setIsHovered] = useState(false);
+
+  useEffect(() => {
+    const handleMouseMove = (e) => {
+      setPosition({ x: e.clientX, y: e.clientY });
+    };
+
+    window.addEventListener('mousemove', handleMouseMove);
+
+    // Apply hover states to all actionable DOM elements
+    const addHoverEvents = () => {
+      const elements = document.querySelectorAll(
+        'a, button, select, input, [role="button"], .slider-input'
+      );
+      elements.forEach((el) => {
+        el.addEventListener('mouseenter', () => setIsHovered(true));
+        el.addEventListener('mouseleave', () => setIsHovered(false));
+      });
+    };
+
+    // Delayed trigger to ensure dynamically loaded elements are scanned
+    const timer = setTimeout(addHoverEvents, 800);
+
+    return () => {
+      window.removeEventListener('mousemove', handleMouseMove);
+      clearTimeout(timer);
+    };
+  }, []);
+
+  // Animate the outer ring coordinate using requestAnimationFrame for smooth latency
+  useEffect(() => {
+    let reqId;
+    const updateRing = () => {
+      setRingPosition((prev) => {
+        const dx = position.x - prev.x;
+        const dy = position.y - prev.y;
+        return {
+          x: prev.x + dx * 0.16,
+          y: prev.y + dy * 0.16
+        };
+      });
+      reqId = requestAnimationFrame(updateRing);
+    };
+    reqId = requestAnimationFrame(updateRing);
+    return () => cancelAnimationFrame(reqId);
+  }, [position]);
+
+  if (typeof window !== 'undefined' && window.innerWidth < 768) return null;
+
+  return (
+    <>
+      <div 
+        className={`custom-cursor-dot ${isHovered ? 'hovered' : ''}`} 
+        style={{ left: `${position.x}px`, top: `${position.y}px` }}
+      />
+      <div 
+        className={`custom-cursor-ring ${isHovered ? 'hovered' : ''}`} 
+        style={{ left: `${ringPosition.x}px`, top: `${ringPosition.y}px` }}
+      />
+    </>
+  );
 }
 
 // ----------------------------------------------------
@@ -267,6 +349,9 @@ function App() {
 
   return (
     <>
+      {/* Custom smooth trailing cursor */}
+      <CustomCursor />
+
       {/* Dynamic interactive background canvas */}
       <NeuralBackground />
 
