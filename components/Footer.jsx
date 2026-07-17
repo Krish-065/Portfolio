@@ -39,6 +39,12 @@ export default function Footer() {
           <span style={styles.terminalPrompt}>$</span>echo $LICENSE 
           <span style={styles.licenseVal}> &gt; MIT_License (Krish Shah)</span>
         </div>
+<<<<<<< HEAD
+=======
+        <div style={styles.author}>
+          Made with ⚛ React & Vite • © {new Date().getFullYear()}
+        </div>
+>>>>>>> 2f050853313dbe04190aac999127b2270c44282b
       </div>
     </footer>
   );
