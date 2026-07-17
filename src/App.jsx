@@ -2,11 +2,7 @@ import React, { useState, useEffect, useRef } from 'react';
 import './App.css';
 
 // Import portfolio components
-<<<<<<< HEAD
 import Navbar from './pages/Navbar';
-=======
-import Header from '../components/Header';
->>>>>>> 2f050853313dbe04190aac999127b2270c44282b
 import About from '../components/About';
 import Skills from '../components/Skills';
 import Footer from '../components/Footer';
@@ -360,13 +356,8 @@ function App() {
       <NeuralBackground />
 
       <div className="app-container">
-<<<<<<< HEAD
         {/* Modern responsive navigation bar */}
         <Navbar />
-=======
-        {/* Header navigation bar */}
-        <Header />
->>>>>>> 2f050853313dbe04190aac999127b2270c44282b
 
         {/* About profile card with automated typewriter headings */}
         <About />
