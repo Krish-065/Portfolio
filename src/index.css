@@ -1,0 +1,81 @@
+:root {
+  --bg-dark: #070a13;
+  --bg-card: rgba(13, 20, 38, 0.6);
+  --bg-card-hover: rgba(20, 30, 58, 0.85);
+  --accent-cyan: #00f2fe;
+  --accent-purple: #c084fc;
+  --accent-green: #10b981;
+  --text-primary: #f3f4f6;
+  --text-secondary: #9ca3af;
+  --border-color: rgba(255, 255, 255, 0.08);
+  --shadow-glow: 0 0 20px rgba(0, 242, 254, 0.15);
+  
+  --sans: 'Outfit', 'Inter', system-ui, -apple-system, sans-serif;
+  --mono: 'Fira Code', 'Courier New', monospace;
+
+  font-family: var(--sans);
+  color-scheme: dark;
+  color: var(--text-primary);
+  background: var(--bg-dark);
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--bg-dark);
+  background-image: 
+    radial-gradient(circle at 10% 20%, rgba(0, 242, 254, 0.05) 0%, transparent 40%),
+    radial-gradient(circle at 90% 80%, rgba(192, 132, 252, 0.05) 0%, transparent 40%);
+  background-attachment: fixed;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+#root {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding: 0 24px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  color: var(--text-primary);
+  margin-top: 0;
+  font-weight: 600;
+  letter-spacing: -0.02em;
+}
+
+a {
+  color: var(--accent-cyan);
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+a:hover {
+  filter: brightness(1.2);
+}
+
+/* Custom scrollbar for modern coding terminal vibes */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-dark);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--accent-cyan);
+}
