@@ -18,10 +18,10 @@ This repository hosts a custom, highly interactive React & Vite portfolio built 
 
 Here are my key engineering projects integrated directly into this portfolio layout:
 
-1.  **[NyayMitra (AI Legal Assistant)](https://github.com/Krish-065/nyaymitra)**: An AI-powered legal copilot for Indian laws, built using React, Node.js, and MongoDB, complete with an interactive chat assistant and Case Strategy Room.
-2.  **[Space Data Science Analytics](https://github.com/Krish-065/Learning-Data-Science-with-Space)**: Data mining, preprocessing, and machine learning models implemented on real-life space exploration and astronomy datasets.
-3.  **[NonStock PricePulse](https://github.com/Krish-065/NonStock-prisepulse-)**: A fast-polling financial stock and asset dashboard utilizing TradingView APIs and compound strategy configurations.
-4.  **[Sales Trend Analyzer](https://github.com/Krish-065/Sales-analyzer)**: E-commerce sales forecasting and customer clustering pipeline in Python.
+
+1.  **[Space Data Science Analytics](https://github.com/Krish-065/Learning-Data-Science-with-Space)**: Data mining, preprocessing, and machine learning models implemented on real-life space exploration and astronomy datasets.
+2.  **[NonStock PricePulse](https://github.com/Krish-065/NonStock-prisepulse-)**: A fast-polling financial stock and asset dashboard utilizing TradingView APIs and compound strategy configurations.
+3.  **[Sales Trend Analyzer](https://github.com/Krish-065/Sales-analyzer)**: E-commerce sales forecasting and customer clustering pipeline in Python.
 
 ---
 
