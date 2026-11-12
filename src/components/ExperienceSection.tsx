@@ -6,7 +6,7 @@ export const ExperienceSection: React.FC = () => {
   return (
     <section id="experience" className="py-24 border-t border-canvas-border bg-canvas relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        
+
         {/* Section Header */}
         <div className="max-w-3xl mb-16">
           <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-canvas-surface border border-canvas-border text-xs font-mono uppercase tracking-wider text-charcoal-700 shadow-subtle mb-3">
@@ -22,7 +22,7 @@ export const ExperienceSection: React.FC = () => {
         </div>
 
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12">
-          
+
           {/* Left Column: Timeline of Experience & Hackathons */}
           <div className="lg:col-span-7 space-y-6">
             <h3 className="font-heading font-bold text-xl text-charcoal-900 flex items-center gap-2 mb-6">
@@ -38,15 +38,14 @@ export const ExperienceSection: React.FC = () => {
                   <div key={item.id} className="relative pl-9">
                     {/* Timeline Node Dot */}
                     <div
-                      className={`absolute left-2 top-1.5 w-3.5 h-3.5 rounded-full border-2 bg-canvas-surface -translate-x-1/2 ${
-                        status.isActive
+                      className={`absolute left-2 top-1.5 w-3.5 h-3.5 rounded-full border-2 bg-canvas-surface -translate-x-1/2 ${status.isActive
                           ? 'border-emerald-600 bg-emerald-500 animate-pulse'
                           : item.type === 'Internship'
-                          ? 'border-cobalt bg-cobalt-light'
-                          : item.type === 'Leadership & Sports'
-                          ? 'border-amber-600 bg-amber-50'
-                          : 'border-charcoal-700 bg-canvas'
-                      }`}
+                            ? 'border-cobalt bg-cobalt-light'
+                            : item.type === 'Leadership & Sports'
+                              ? 'border-amber-600 bg-amber-50'
+                              : 'border-charcoal-700 bg-canvas'
+                        }`}
                     />
 
                     {/* Card Content */}

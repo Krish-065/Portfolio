@@ -39,7 +39,7 @@ export const AboutSection: React.FC = () => {
             </p>
 
             <p>
-              I am also currently engineering as a Software Development Engineer (SDE) Intern at <strong>Bluestock Fintech</strong> (and previously at <strong>YoungBrainz Infotech</strong>), building high-performance market analytics tools and scalable APIs for active traders and users.
+              I am also currently working as a Data Analyst Intern at <strong>Bluestock™</strong> (and previously as a Data Analyst Intern at <strong>YoungBrainz Infotech Pvt. Ltd.</strong>), building data pipelines, statistical predictive forecasting models, and financial market analytics for active participants.
             </p>
 
             <p>

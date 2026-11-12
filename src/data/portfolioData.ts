@@ -449,32 +449,33 @@ export const skillGroups: SkillGroup[] = [
 export const experienceItems: ExperienceItem[] = [
   {
     id: "bluestock-fintech",
-    role: "Software Development Engineer (SDE) Intern",
-    organization: "Bluestock Fintech (bluestock.in)",
-    period: "2026 – Present",
+    role: "Data Analyst Intern",
+    organization: "Bluestock™ (bluestock.in)",
+    period: "Nov 2026 – Present · Remote",
     type: "Internship",
     isCurrent: true,
     companyUrl: "https://bluestock.in",
-    badge: "FinTech & Stock Analytics",
+    badge: "Active / Currently Pursuing",
     highlights: [
-      "Engineering core features for Bluestock Fintech’s real-time stock analytics, IPO tracking, and paper trading platforms.",
-      "Developing high-performance financial chart modules and optimizing RESTful API datafeeds for active retail market participants.",
-      "Collaborating directly with fintech engineering leads to implement clean, scalable TypeScript components."
+      "Analyzing financial and stock market datasets for Indian equity markets, IPO performance metrics, and algorithmic paper trading.",
+      "Developing statistical analysis pipelines, data cleaning workflows, and quantitative analytics to empower retail market research.",
+      "Collaborating on data-driven product insights and market trend metrics for active market participants."
     ]
   },
   {
     id: "youngbrainz-infotech",
-    role: "Software Engineering Intern",
-    organization: "YoungBrainz Infotech",
-    period: "2025 – 2026",
+    role: "Data Analyst Intern",
+    organization: "YoungBrainz Infotech Pvt. Ltd.",
+    period: "May 2026 – Jun 2026 · 2 mos · Remote",
     type: "Internship",
     isCurrent: false,
     companyUrl: "https://youngbrainzinfotech.com",
-    badge: "Full-Stack Web Engineering",
+    badge: "Completed Internship",
     highlights: [
-      "Engineered production full-stack web applications, built modular Express/Node.js API endpoints, and integrated relational database schemas.",
-      "Collaborated across agile sprint cycles, participated in code reviews, and implemented responsive frontend interfaces with modern CSS/JavaScript.",
-      "Optimized backend response times and integrated third-party REST services for commercial client deployments."
+      "Built FutureSkills-AI, an end-to-end AI Job Market Intelligence & Predictive Analytics platform aggregating global tech hiring data and projecting 14-month forecasts using Linear Regression (95% CI).",
+      "Executed complete data pipeline work: data cleaning, feature engineering, and exploratory analysis on 10k+ records powering real-time KPIs and interactive visualizations.",
+      "Architected decoupled microservices with React/Vite frontend, Node.js/Express API Gateway (JWT auth + caching), and FastAPI Python analytics service on MongoDB Atlas.",
+      "Independently researched and resolved complex project bottlenecks (recognized by mentor as a 'Great problem solver')."
     ]
   },
   {

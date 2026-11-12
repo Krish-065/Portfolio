@@ -11,7 +11,7 @@
 
 **AI/ML Engineer • Software Developer • Entrepreneur**  
 Information Technology student at Charusat University (DEPSTAR, 2024–2028).  
-SDE Intern at **Bluestock Fintech** (`bluestock.in`) | Former Intern at **YoungBrainz Infotech**.  
+Data Analyst Intern at **Bluestock™** (`bluestock.in`) | Former Data Analyst Intern at **YoungBrainz Infotech Pvt. Ltd.**  
 National Collegiate Athlete (All India University Basketball Team, 2 consecutive years) & University Sports Coordinator.
 
 ---

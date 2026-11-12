@@ -140,7 +140,7 @@ export const Hero: React.FC = () => {
                       Krish Shah
                     </div>
                     <div className="text-[11px] font-mono text-charcoal-500 mt-0.5">
-                      AI/ML • SDE Intern @ Bluestock
+                      AI/ML • Data Analyst Intern @ Bluestock™
                     </div>
                   </div>
                   
