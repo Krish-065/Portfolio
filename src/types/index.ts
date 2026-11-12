@@ -46,10 +46,13 @@ export interface ExperienceItem {
   role: string;
   organization: string;
   period: string;
-  type: 'Leadership & Sports' | 'Hackathon Team' | 'Academic' | 'Professional Role Placeholder';
+  type: 'Internship' | 'Leadership & Sports' | 'Hackathon Team' | 'Academic' | 'Professional Role Placeholder';
   highlights: string[];
   badge?: string;
   isPlaceholder?: boolean;
+  isCurrent?: boolean;
+  endDate?: string; // YYYY-MM-DD or YYYY-MM
+  companyUrl?: string;
 }
 
 export interface CertificationItem {

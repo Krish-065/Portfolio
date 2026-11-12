@@ -1,5 +1,5 @@
 import React from 'react';
-import { ExternalLink, Github, ArrowRight, ShieldCheck, Activity, MapPin, TrendingUp, Ship, Wind } from 'lucide-react';
+import { ExternalLink, Github, ArrowRight, ShieldCheck, Activity, MapPin, TrendingUp, Store, Scale, QrCode } from 'lucide-react';
 import { featuredProjects } from '../data/portfolioData';
 import { Project } from '../types';
 
@@ -223,52 +223,52 @@ export const FeaturedProjects: React.FC<FeaturedProjectsProps> = ({ onSelectProj
                           </div>
                         )}
 
-                        {project.id === 'harborline' && (
+                        {project.id === 'cafecanopy' && (
                           <div className="space-y-3">
                             <div className="flex items-center justify-between text-xs font-mono text-charcoal-600 bg-canvas-surface p-2.5 rounded-lg border border-canvas-border">
                               <span className="flex items-center gap-2">
-                                <Ship className="w-4 h-4 text-blue-600" />
-                                <span>AIS TELEMETRY & OR-TOOLS</span>
+                                <Store className="w-4 h-4 text-amber-700" />
+                                <span>POS & KITCHEN WEBSOCKETS</span>
                               </span>
-                              <span className="text-amber-700 font-semibold">72H FORECAST</span>
+                              <span className="text-emerald-700 font-semibold">DYNAMIC UPI</span>
                             </div>
                             <div className="grid grid-cols-2 gap-2 text-[11px] font-mono">
                               <div className="p-2.5 bg-canvas-surface rounded border border-canvas-border">
-                                <div className="text-charcoal-400 text-[10px]">CONGESTION ML</div>
-                                <div className="text-charcoal-800 font-semibold mt-1">XGBoost (IMF Data)</div>
+                                <div className="text-charcoal-400 text-[10px]">KITCHEN SYNC</div>
+                                <div className="text-charcoal-800 font-semibold mt-1">Socket.io Dispatch</div>
                               </div>
                               <div className="p-2.5 bg-canvas-surface rounded border border-canvas-border">
-                                <div className="text-charcoal-400 text-[10px]">OPTIMIZATION</div>
-                                <div className="text-charcoal-800 font-semibold mt-1">Google CP-SAT</div>
+                                <div className="text-charcoal-400 text-[10px]">FLOOR SYSTEM</div>
+                                <div className="text-charcoal-800 font-semibold mt-1">Multi-Floor Seating</div>
                               </div>
                             </div>
                             <div className="text-[10px] font-mono text-charcoal-500 text-center">
-                              Team BugHunters • IBM Bob AI Hackathon
+                              Odoo x Parul Hackathon Finalist Project
                             </div>
                           </div>
                         )}
 
-                        {project.id === 'airlens' && (
+                        {project.id === 'ecourt' && (
                           <div className="space-y-3">
                             <div className="flex items-center justify-between text-xs font-mono text-charcoal-600 bg-canvas-surface p-2.5 rounded-lg border border-canvas-border">
                               <span className="flex items-center gap-2">
-                                <Wind className="w-4 h-4 text-teal-600" />
-                                <span>VISUAL GROUND TRUTH</span>
+                                <Scale className="w-4 h-4 text-cobalt" />
+                                <span>16-DIGIT CNR & STATUTORY RAG</span>
                               </span>
-                              <span className="text-cobalt font-semibold">WAQI API</span>
+                              <span className="text-emerald-700 font-semibold">3,000+ COURTS</span>
                             </div>
                             <div className="p-3 bg-canvas-surface rounded-lg border border-canvas-border space-y-1.5 font-mono text-[11px]">
                               <div className="flex justify-between">
-                                <span className="text-charcoal-500">FX Physics:</span>
-                                <span className="text-charcoal-800">Canvas Smoke Particles</span>
+                                <span className="text-charcoal-500">Legal Corpus:</span>
+                                <span className="text-charcoal-800">Constitution, BNS, BNSS, BSA</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-charcoal-500">Backend & DB:</span>
-                                <span className="text-charcoal-800">Node / Postgres / Prisma</span>
+                                <span className="text-charcoal-500">Vector Search:</span>
+                                <span className="text-charcoal-800">FastAPI & pgvector</span>
                               </div>
                               <div className="flex justify-between">
-                                <span className="text-charcoal-500">Visual Evidence:</span>
-                                <span className="text-charcoal-800">Geotagged Photo Uploads</span>
+                                <span className="text-charcoal-500">Evidence Vault:</span>
+                                <span className="text-charcoal-800">SHA-256 & AES-256-GCM</span>
                               </div>
                             </div>
                           </div>

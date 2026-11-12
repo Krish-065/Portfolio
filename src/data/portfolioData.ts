@@ -15,6 +15,7 @@ export const personalInfo = {
   availability: "Open to AI/ML & Full-Stack Engineering roles, research collaborations, and entrepreneurial ventures.",
   resumePath: "/Krish_Shah_Resume.pdf",
   portfolioUrl: "https://krishshah.tech",
+  avatarPath: "/krish-shah.jpg",
   socialLinks: {
     github: "https://github.com/Krish-065",
     linkedin: "https://www.linkedin.com/in/krishshah065/",
@@ -154,76 +155,77 @@ export const featuredProjects: Project[] = [
     githubUrl: "https://github.com/Krish-065/FutureSkills-AI"
   },
   {
-    id: "harborline",
-    title: "Harborline",
-    tagline: "AI-Powered Maritime Port Operations Intelligence & Berthing Optimization",
-    category: "Maritime Intelligence",
-    role: "Core ML & Optimization Engineer (Team BugHunters)",
+    id: "cafecanopy",
+    title: "CafeCanopy",
+    tagline: "Modern Restaurant POS & Real-Time Kitchen Display System (Odoo x Parul Finalist)",
+    category: "Flagship Platform",
+    role: "Full-Stack Architect & Core Developer (Finalist Team)",
     date: "2026",
     featuredOrder: 4,
-    summary: "Built for the IBM Bob AI Hackathon by team BugHunters. Combines live AIS vessel tracking with XGBoost congestion forecasting (24h, 48h, 72h) and Google OR-Tools CP-SAT for automated berth and crane scheduling across major Indian ports.",
-    problem: "Port shift supervisors at major Indian ports (JNPA, Mundra, Chennai, Kandla, Vizag) react to bottleneck congestion only after lengthy vessel queues form, costing millions in demurrage.",
-    solution: "Harborline streams real-time AIS vessel telemetry, predicts congestion pressure up to 72 hours ahead using XGBoost trained on IMF PortWatch data, and solves optimal berth-crane schedules using constraint programming.",
-    myContribution: "Collaborated on the machine learning pipeline, constraint solver optimization logic with Google OR-Tools CP-SAT, and frontend dashboard components.",
-    verifiedTech: ["Python", "FastAPI", "React", "Vite", "Google OR-Tools CP-SAT", "XGBoost", "Scikit-Learn", "AISStream.io", "IBM Bob MCP"],
+    summary: "Built for the Odoo x Parul Hackathon final round after being selected as a virtual round finalist prototype. A comprehensive restaurant management and Point-of-Sale (POS) platform featuring a dual-panel checkout register, real-time WebSocket kitchen display dispatching (KDS), dynamic QR-based UPI payment processing, and multi-floor table seating.",
+    problem: "High-volume cafés and restaurants struggle with disjointed checkout systems, manual paper kitchen slips, order transmission delays, and cumbersome split payments.",
+    solution: "CafeCanopy delivers sub-second order dispatching to kitchen staff via WebSockets (Socket.io), automated dynamic QR codes scaling to exact checkout bill amounts for instant UPI payment, and an interactive multi-floor table seating visualizer.",
+    myContribution: "Co-architected the full-stack system, engineered the real-time WebSocket event layer for instant POS-to-kitchen ticket synchronization, built the dynamic UPI QR engine, and developed PostgreSQL schemas.",
+    verifiedTech: ["React", "TypeScript", "Vite", "Tailwind CSS", "Recharts", "Node.js", "Express", "Socket.io", "PostgreSQL", "Cloudinary"],
     features: [
-      "72-Hour Congestion Forecasting: XGBoost time-series model predicting port bottleneck risk at 24h, 48h, and 72h intervals.",
-      "Live AIS Maritime Telemetry: Real-time vessel positions, headings, speeds, and anchoring statuses over 5 key Indian maritime hubs.",
-      "Berth & Crane Constraint Solver: Google OR-Tools CP-SAT algorithm assigns incoming vessels to berths and cranes to minimize turnaround latency.",
-      "Disruption What-If Simulator: Real-time impact simulation for crane mechanical failures, adverse weather, and delayed arrivals.",
-      "IBM Bob MCP Integration: Natural-language operations assistant enabling shift supervisors to query port status and trigger re-optimization."
+      "Real-time Kitchen Display System (KDS): Sub-second order broadcast via WebSockets from cashier registers directly to kitchen chef screens.",
+      "Dynamic QR-Based UPI Payments: Automatically generates precise checkout bill amount QR codes with merchant UPI identifiers.",
+      "Unified POS Checkout Terminal: Category-based product catalog, instant search, dynamic cart modifications, and live table assignment.",
+      "Multi-Floor Space Management: Interactive table layout and occupancy tracker for Main Floor and Rooftop Canopy dining spaces.",
+      "Role-Based Access Control (RBAC): Dedicated, secure interfaces for Admin, Cashier, Chef, and Customer views.",
+      "Hackathon Finalist Prototype: Engineered and showcased as the finalist project at the Odoo x Parul Hackathon."
     ],
     architecture: {
-      overview: "Real-time streaming pipeline feeding a predictive XGBoost layer and a mathematical CP-SAT constraint solver.",
+      overview: "Real-time bidirectional event architecture pairing front-of-house POS registers with kitchen screens over WebSockets.",
       steps: [
-        { title: "Live AIS Ingestion", desc: "Continuous WebSocket stream from AISStream.io bounded to Indian coastal port zones." },
-        { title: "IMF PortWatch Model", desc: "Trained XGBoost model classifies congestion probability from historical port dwell patterns." },
-        { title: "CP-SAT Constraint Solver", desc: "Google OR-Tools optimizes non-overlapping berth windows and crane allocation schedules." },
-        { title: "Supervisor Ops Dashboard", desc: "Interactive operations view with disruption simulator and 72-hour planning exports." }
+        { title: "POS Checkout Terminal", desc: "Cashier assigns table, configures order items, and initiates payment selection." },
+        { title: "WebSocket Kitchen Sync", desc: "Socket.io broadcasts order payload in real time to the Kitchen Display System." },
+        { title: "Dynamic UPI QR Engine", desc: "Renders exact bill payment QR code for instant UPI settlement." },
+        { title: "PostgreSQL Ledger", desc: "Records transaction receipts, updates table status, and feeds sales analytics." }
       ]
     },
     metrics: [
-      { label: "Target Ports", value: "5 Major Indian Ports" },
-      { label: "Prediction Window", value: "24h / 48h / 72h Ahead" },
-      { label: "Hackathon", value: "IBM Bob AI Hackathon" }
+      { label: "Hackathon Track", value: "Odoo x Parul Finalist" },
+      { label: "Kitchen Sync", value: "Real-Time WebSockets" },
+      { label: "Payment Method", value: "Dynamic UPI QR Engine" }
     ],
-    githubUrl: "https://github.com/Krish-065/-Harborline-bob-ai-hackathon-BugHunters"
+    githubUrl: "https://github.com/Krish-065/CafeCanopy"
   },
   {
-    id: "airlens",
-    title: "AirLens",
-    tagline: "Hyper-Local Visual Air Quality Intelligence & Ground-Truth Verification",
-    category: "Environmental AI",
-    role: "Full-Stack Engineer & Interactive UI Architect",
+    id: "ecourt",
+    title: "eCourt",
+    tagline: "AI Legal Operating System for India — Live Docket Tracking & Statutory RAG",
+    category: "AI & GovTech",
+    role: "AI Microservices & Full-Stack Architect",
     date: "2026",
     featuredOrder: 5,
-    summary: "An environmental intelligence platform bridging abstract AQI numbers with visual reality. Combines real-time sensor data from the World Air Quality Index (WAQI) with geolocated, community-contributed visual pollution evidence.",
-    problem: "Official sensor networks report raw numbers like 'AQI 160', but numbers alone fail to illustrate localized smoke, garbage burns, or industrial haze that sensors often miss.",
-    solution: "A crowdsourced platform capturing geolocated visual evidence paired with official WAQI telemetry, presented through a responsive interface with interactive physics particles and frosted glass aesthetics.",
-    myContribution: "Architected the full-stack system, implemented interactive canvas physics (smoke particle cursor tracking), developed the Express REST API with PostgreSQL/Prisma, and integrated WAQI telemetry.",
-    verifiedTech: ["TypeScript", "React", "Vite", "Tailwind CSS", "Framer Motion", "GSAP", "Node.js", "Express", "PostgreSQL", "Prisma ORM", "WAQI API", "Cloudinary"],
+    summary: "A production-grade AI Legal Operating System engineered for Indian jurisprudence. Unites automated 16-digit CNR case docket tracking across 3,000+ Indian courts, zero-hallucination statutory RAG grounded in the Constitution, BNS 2023, BNSS 2023, BSA 2023, and cryptographic client evidence vaults.",
+    problem: "Litigants and advocates struggle with fragmented eCourts portals, delayed cause lists, dense legal language, and the major legislative transition from IPC/CrPC to the Bharatiya Nyaya Sanhita (BNS 2023).",
+    solution: "A unified judicial intelligence suite offering automated CNR docket polling, statutory RAG with IPC/BNS concordance cross-mapping, role-specialized AI legal agents, and tamper-evident SHA-256 evidence logs.",
+    myContribution: "Engineered the FastAPI Python microservice, implemented pgvector statutory embeddings for BNS/BNSS/BSA concordance mapping, and developed the Next.js/Tailwind client interfaces.",
+    verifiedTech: ["Next.js 14", "TypeScript", "FastAPI (Python 3.11)", "Node.js", "PostgreSQL 16", "pgvector", "AES-256-GCM", "Tailwind CSS"],
     features: [
-      "Visual Ground-Truth Capture: Users upload geolocated photographic evidence of ambient air quality, smoke, and smog.",
-      "WAQI Telemetry Integration: Real-time air quality index data with spatial interpolation across uncovered regions.",
-      "Interactive Smoke Particle Physics: Canvas-rendered dynamic particulate animation reacting to user cursor movement.",
-      "Curated Community Feed: Moderation workflow and image storage powered by Cloudinary and PostgreSQL.",
-      "Responsive Glassmorphic UI: Editorial dark-accented environmental aesthetics engineered with Tailwind CSS and Framer Motion."
+      "Live eCourts Docket & CNR Tracking: Automated 16-digit CNR case lookup across 3,000+ District and High Courts in India.",
+      "Anti-Hallucination Statutory RAG: Vector search tethered strictly to active Bare Acts and reported Supreme Court precedents.",
+      "New Criminal Laws 2023 Cross-Mapping: Complete concordance cross-mapping between old IPC/CrPC provisions and new BNS, BNSS, and BSA statutes.",
+      "Role-Specialized Legal Agents: Dedicated workflows for Citizen Legal Advisory, Advocate Co-Counsel petition drafting, and Corporate Compliance.",
+      "Cryptographic Evidence Vault: Chronological tamper-evident incident log secured with SHA-256 hashes and AES-256-GCM encryption."
     ],
     architecture: {
-      overview: "Dual-source system merging physical sensor telemetry with crowdsourced media assets.",
+      overview: "Decoupled microservice architecture with Next.js frontend, Node.js docket tracking gateway, and FastAPI vector search service.",
       steps: [
-        { title: "WAQI Telemetry Polling", desc: "Fetches station readings, PM2.5, PM10, and atmospheric parameters by lat/lng." },
-        { title: "Media Upload & Geotagging", desc: "Cloudinary image optimization paired with PostgreSQL spatial coordinates." },
-        { title: "Particle Simulation Canvas", desc: "Custom HTML5 Canvas renders particle turbulence mapped to regional AQI severity." },
-        { title: "Community Verification Feed", desc: "Prisma-backed queries stream verified visual reports for municipal transparency." }
+        { title: "16-Digit CNR Scraper", desc: "Queries national court portals to fetch cause lists, bench details, and interim orders." },
+        { title: "Statutory RAG (pgvector)", desc: "Vector similarity search across indexed Constitution and 2023 criminal law codes." },
+        { title: "Legal Prompt Gating", desc: "Strict anti-hallucination guardrails citing specific statutory clauses and ratio decidendi." },
+        { title: "Tamper-Evident Ledger", desc: "Stores evidentiary documentation with cryptographic SHA-256 verification timestamps." }
       ]
     },
     metrics: [
-      { label: "Data Source", value: "WAQI Global Sensor Network" },
-      { label: "Media Pipeline", value: "Cloudinary CDN" },
-      { label: "Database ORM", value: "PostgreSQL & Prisma" }
+      { label: "Court Coverage", value: "3,000+ Indian Courts" },
+      { label: "Statutory Scope", value: "BNS, BNSS, BSA & Constitution" },
+      { label: "Vector Search", value: "PostgreSQL + pgvector" }
     ],
-    githubUrl: "https://github.com/Krish-065/Airlens"
+    githubUrl: "https://github.com/Krish-065/Ecourt"
   }
 ];
 
@@ -303,25 +305,6 @@ export const researchModels: ResearchModel[] = [
 ];
 
 export const secondaryProjects: Project[] = [
-  {
-    id: "nyaymitra",
-    title: "NyayMitra Backend",
-    tagline: "AI-Powered Legal Assistant for Indian Jurisprudence & Case Strategy Room",
-    category: "AI & GovTech",
-    role: "Backend Engineer",
-    date: "2026",
-    summary: "Backend service powering an Indian legal assistant featuring general conversational queries on Indian statutory law and a specialized Pro Case Strategy Room for structured argument preparation.",
-    problem: "Legal research in India is hindered by dense, convoluted statutory texts and scattered case references that take paralegals hours to parse.",
-    solution: "A Node.js/Express service providing structured prompts, context handling, and case strategy endpoints for legal inquiries.",
-    myContribution: "Architected the Express server, built middleware for query handling, structured case modeling schemas, and integrated API endpoints.",
-    verifiedTech: ["JavaScript", "Node.js", "Express", "REST APIs"],
-    features: [
-      "Statutory Legal Chatbot: Context-aware query processing for Indian legal codes.",
-      "Pro Case Strategy Room: Endpoints supporting structured legal case analysis and defense strategy structuring.",
-      "Clean Modular Structure: Express middleware, routes, and models ready for secure client consumption."
-    ],
-    githubUrl: "https://github.com/Krish-065/nyaymitra-backend"
-  },
   {
     id: "sales-analyzer",
     title: "Sales Trend Analyzer",
@@ -405,8 +388,8 @@ export const skillGroups: SkillGroup[] = [
       { name: "XGBoost & LightGBM", context: "Gradient boosting for tabular time-series & port congestion" },
       { name: "TCN (Temporal Convolutional Networks)", context: "Temporal market modeling without leakage" },
       { name: "GNN & Spatio-Temporal Attention", context: "Cross-asset correlation and sector spillovers (STAGE-Net)" },
-      { name: "LLM, RAG & FinNLP", context: "GDELT news sentiment extraction and MCP assistants" },
-      { name: "Google OR-Tools CP-SAT", context: "Constraint programming for berth-crane optimization" }
+      { name: "LLM, RAG & Legal NLP", context: "Statutory embeddings, pgvector, and legal RAG reasoning" },
+      { name: "Time-Series ML", context: "Predictive volume modeling with 95% confidence intervals" }
     ]
   },
   {
@@ -428,11 +411,11 @@ export const skillGroups: SkillGroup[] = [
     description: "Modern, responsive, accessible web engineering and interactive user experiences.",
     skills: [
       { name: "React (v18+)", context: "Component architecture, hooks, custom state management" },
+      { name: "Next.js (App Router)", context: "Server components, static & dynamic SSR architectures" },
       { name: "Vite", context: "Lightning-fast build tooling and modern frontend bundling" },
       { name: "Tailwind CSS", context: "Design systems, responsive editorial layouts, custom utility layers" },
       { name: "Framer Motion", context: "Choreographed page transitions, gesture interactions, staggered reveals" },
-      { name: "HTML5 Canvas 2D", context: "Interactive mathematical graphs and physics particle engines" },
-      { name: "Responsive UI/UX", context: "Mobile-first, accessible, semantic HTML architecture" }
+      { name: "HTML5 Canvas 2D", context: "Interactive mathematical graphs and physics particle engines" }
     ]
   },
   {
@@ -442,10 +425,9 @@ export const skillGroups: SkillGroup[] = [
     skills: [
       { name: "FastAPI (Python)", context: "Asynchronous high-throughput ML analytics services" },
       { name: "Node.js & Express", context: "API gateways, rate limiting, JWT authentication" },
-      { name: "WebSockets", context: "Real-time market tick streaming and AIS telemetry" },
+      { name: "WebSockets & Socket.io", context: "Real-time kitchen POS dispatching & market streaming" },
       { name: "RESTful API Architecture", context: "Clean decoupled microservices contracts" },
-      { name: "Authentication & Security", context: "JWT tokens, Bcrypt hashing, CORS, route protection" },
-      { name: "Model Context Protocol (MCP)", context: "LLM tooling integration (IBM Bob)" }
+      { name: "Authentication & Security", context: "JWT tokens, Bcrypt hashing, AES-256-GCM encryption" }
     ]
   },
   {
@@ -453,7 +435,7 @@ export const skillGroups: SkillGroup[] = [
     iconName: "Database",
     description: "Data persistence, spatial extensions, cloud clusters, and containerization.",
     skills: [
-      { name: "PostgreSQL & PostGIS 16", context: "Spatial cadastral polygon storage and spatial indexing" },
+      { name: "PostgreSQL & pgvector", context: "Vector embeddings, legal RAG search, and spatial PostGIS" },
       { name: "MongoDB Atlas", context: "Document database for job market analytics" },
       { name: "Prisma ORM", context: "Type-safe database querying and schema migrations" },
       { name: "SQLite", context: "Embedded databases and lightweight analytical pipelines" },
@@ -466,28 +448,45 @@ export const skillGroups: SkillGroup[] = [
 
 export const experienceItems: ExperienceItem[] = [
   {
-    id: "sports-coordinator",
-    role: "University Sports Coordinator & National Athlete",
-    organization: "Charusat University",
-    period: "2025 – Present",
-    type: "Leadership & Sports",
-    badge: "University Leadership & National Selection",
+    id: "bluestock-fintech",
+    role: "Software Development Engineer (SDE) Intern",
+    organization: "Bluestock Fintech (bluestock.in)",
+    period: "2026 – Present",
+    type: "Internship",
+    isCurrent: true,
+    companyUrl: "https://bluestock.in",
+    badge: "FinTech & Stock Analytics",
     highlights: [
-      "Selected consistently for both consecutive years for the All India University Team (National Level Competition) representing Charusat University in Basketball.",
-      "Serve as official University Sports Coordinator, organizing inter-college athletic tournaments, managing scheduling logistics, and fostering competitive athletic discipline across student cohorts."
+      "Engineering core features for Bluestock Fintech’s real-time stock analytics, IPO tracking, and paper trading platforms.",
+      "Developing high-performance financial chart modules and optimizing RESTful API datafeeds for active retail market participants.",
+      "Collaborating directly with fintech engineering leads to implement clean, scalable TypeScript components."
     ]
   },
   {
-    id: "hackathon-bughunters",
-    role: "Core ML & Optimization Engineer — Team BugHunters",
-    organization: "IBM Bob AI Hackathon",
+    id: "youngbrainz-infotech",
+    role: "Software Engineering Intern",
+    organization: "YoungBrainz Infotech",
+    period: "2025 – 2026",
+    type: "Internship",
+    isCurrent: false,
+    companyUrl: "https://youngbrainzinfotech.com",
+    badge: "Full-Stack Web Engineering",
+    highlights: [
+      "Engineered production full-stack web applications, built modular Express/Node.js API endpoints, and integrated relational database schemas.",
+      "Collaborated across agile sprint cycles, participated in code reviews, and implemented responsive frontend interfaces with modern CSS/JavaScript.",
+      "Optimized backend response times and integrated third-party REST services for commercial client deployments."
+    ]
+  },
+  {
+    id: "odoo-parul-finalist",
+    role: "Full-Stack Architect & Finalist Team Member",
+    organization: "Odoo x Parul Hackathon (Final Round)",
     period: "2026",
     type: "Hackathon Team",
-    badge: "Maritime Logistics AI",
+    badge: "Hackathon Finalist",
     highlights: [
-      "Co-engineered Harborline with teammates Aubaid Ahmed Saiyed, Abdulkadir Nursumar, and Ansh Patel.",
-      "Integrated XGBoost 72-hour port congestion forecasting with Google OR-Tools CP-SAT berth-crane constraint optimization for 5 major Indian commercial ports.",
-      "Connected live AIS vessel feeds via AISStream.io and built natural-language operational planning interfaces via IBM Bob MCP."
+      "Selected as a finalist prototype in the virtual round and advanced to the final on-site hackathon round.",
+      "Engineered CafeCanopy in the final round: a complete real-time restaurant POS and Kitchen Display System (KDS) powered by WebSockets (Socket.io), PostgreSQL, and dynamic UPI QR bill calculation."
     ]
   },
   {
@@ -504,6 +503,18 @@ export const experienceItems: ExperienceItem[] = [
     ]
   },
   {
+    id: "sports-coordinator",
+    role: "University Sports Coordinator & National Athlete",
+    organization: "Charusat University",
+    period: "2025 – Present",
+    type: "Leadership & Sports",
+    badge: "University Leadership & National Selection",
+    highlights: [
+      "Selected consistently for both consecutive years for the All India University Team (National Level Competition) representing Charusat University in Basketball.",
+      "Serve as official University Sports Coordinator, organizing inter-college athletic tournaments, managing scheduling logistics, and fostering competitive athletic discipline across student cohorts."
+    ]
+  },
+  {
     id: "hackathon-lead",
     role: "Hackathon Team Lead — Hackathon Tic Tac Toe",
     organization: "Charusat University",
@@ -512,19 +523,6 @@ export const experienceItems: ExperienceItem[] = [
     badge: "First Year Leadership",
     highlights: [
       "Led a 4-member team in first offline 1st-year collegiate hackathon, successfully scoping, architecting, and completing the problem statement within competitive time constraints."
-    ]
-  },
-  {
-    id: "future-industry-role",
-    role: "Upcoming AI/ML Engineering & Software Internship",
-    organization: "Industry / Tech Startup [Placeholder for upcoming placement]",
-    period: "Summer 2026 / Forward",
-    type: "Professional Role Placeholder",
-    isPlaceholder: true,
-    badge: "Available for Hire",
-    highlights: [
-      "Currently seeking high-impact summer/semester engineering internships where I can contribute deep learning pipelines, scalable backend microservices, or quant software.",
-      "Ready to deploy production React/TypeScript frontends, FastAPI/Node backends, and PyTorch ML models to solve real commercial challenges."
     ]
   }
 ];
@@ -593,3 +591,26 @@ export const educationData = {
   ]
 };
 
+/**
+ * Dynamic helper to check internship status:
+ * Automatically marks an internship as active/pursuing if isCurrent is true and today < endDate.
+ * When endDate is reached or passed, it automatically transitions to "Completed Internship".
+ */
+export function getExperienceStatus(item: ExperienceItem): { label: string; isActive: boolean } {
+  if (item.type !== 'Internship') {
+    return { label: item.badge || item.period, isActive: false };
+  }
+
+  if (item.isCurrent) {
+    if (item.endDate) {
+      const end = new Date(item.endDate);
+      const now = new Date();
+      if (now > end) {
+        return { label: 'Completed Internship', isActive: false };
+      }
+    }
+    return { label: 'Active / Currently Pursuing', isActive: true };
+  }
+
+  return { label: 'Completed Internship', isActive: false };
+}

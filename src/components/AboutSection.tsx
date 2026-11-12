@@ -35,7 +35,11 @@ export const AboutSection: React.FC = () => {
             </p>
 
             <p>
-              Similarly, for <strong>Smart India Hackathon 2026 (Problem Statement #18)</strong>, my team and I engineered <strong>BhoomiSetu</strong> to tackle India’s century-old land record crisis: combining computer-vision deskewing, multilingual Indic OCR (Devanagari, Gujarati, Marathi), deterministic revenue syntax validation, and PostGIS cadastral polygon mapping with 14-digit ULPIN tracking.
+              Similarly, for <strong>Smart India Hackathon 2026 (Problem Statement #18)</strong>, my team and I engineered <strong>BhoomiSetu</strong> to tackle India’s century-old land record crisis: combining computer-vision deskewing, multilingual Indic OCR (Devanagari, Gujarati, Marathi), deterministic revenue syntax validation, and PostGIS cadastral polygon mapping with 14-digit ULPIN tracking. In the <strong>Odoo x Parul Hackathon</strong>, we advanced as finalists and built <strong>CafeCanopy</strong>, a real-time WebSocket POS and kitchen display system.
+            </p>
+
+            <p>
+              I am also currently engineering as a Software Development Engineer (SDE) Intern at <strong>Bluestock Fintech</strong> (and previously at <strong>YoungBrainz Infotech</strong>), building high-performance market analytics tools and scalable APIs for active traders and users.
             </p>
 
             <p>

@@ -1,10 +1,8 @@
-import React, { useState } from 'react';
-import { ArrowDown, FileText, Github, Linkedin, ExternalLink, Code2, Sparkles, Image as ImageIcon } from 'lucide-react';
+import React from 'react';
+import { ArrowDown, FileText, Github, Linkedin, ExternalLink, Code2 } from 'lucide-react';
 import { personalInfo, verifiedLeetCode, verifiedGitHub } from '../data/portfolioData';
 
 export const Hero: React.FC = () => {
-  // Allows user to toggle between editorial blueprint placeholder and verified GitHub avatar
-  const [useAvatar, setUseAvatar] = useState(false);
 
   return (
     <section className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden">
@@ -120,70 +118,36 @@ export const Hero: React.FC = () => {
 
           </div>
 
-          {/* Right Column: Editorial Portrait Placeholder with Replacement Guide */}
+          {/* Right Column: Editorial Portrait Showcase with Krish's Photo */}
           <div className="lg:col-span-5 flex flex-col items-center">
-            <div className="relative w-full max-w-[380px] aspect-[4/5] rounded-2xl p-3 bg-canvas-surface border border-canvas-border shadow-elevated">
+            <div className="relative w-full max-w-[380px] aspect-[4/5] rounded-2xl p-2.5 bg-canvas-surface border border-canvas-border shadow-elevated group">
               
-              {/* Inner Frame */}
-              <div className="relative w-full h-full rounded-xl overflow-hidden bg-gradient-to-b from-canvas-subtle via-canvas to-canvas-border/40 border border-canvas-border flex flex-col items-center justify-between p-6 text-center select-none">
+              {/* Inner Image Frame */}
+              <div className="relative w-full h-full rounded-xl overflow-hidden bg-canvas-subtle border border-canvas-border shadow-inner">
+                <img
+                  src="/krish-shah.jpg"
+                  alt="Krish Shah — AI/ML Engineer & Software Developer"
+                  className="w-full h-full object-cover object-top group-hover:scale-[1.02] transition-transform duration-500"
+                />
                 
-                {/* Header status bar inside portrait card */}
-                <div className="w-full flex items-center justify-between text-[11px] font-mono text-charcoal-500">
-                  <span className="flex items-center gap-1.5">
-                    <span className="w-1.5 h-1.5 rounded-full bg-cobalt" />
-                    PORTRAIT FRAME
-                  </span>
-                  <span className="px-2 py-0.5 rounded bg-canvas border border-canvas-border text-[10px]">
-                    4 : 5 RATIO
-                  </span>
-                </div>
+                {/* Subtle vignette gradient overlay at bottom */}
+                <div className="absolute inset-0 bg-gradient-to-t from-charcoal-900/80 via-charcoal-900/10 to-transparent pointer-events-none" />
 
-                {/* Center Visual: Avatar vs Placeholder */}
-                {useAvatar ? (
-                  <div className="relative w-36 h-36 rounded-full overflow-hidden border-2 border-cobalt shadow-md my-auto">
-                    <img
-                      src="https://avatars.githubusercontent.com/u/183746928?v=4"
-                      alt="Krish Shah GitHub Avatar"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                ) : (
-                  <div className="flex flex-col items-center justify-center my-auto">
-                    {/* Architectural Monogram Icon */}
-                    <div className="relative w-28 h-28 rounded-2xl bg-charcoal-900 text-canvas flex flex-col items-center justify-center mb-4 shadow-elevated group">
-                      <div className="font-heading font-bold text-4xl tracking-tight text-white">
-                        KS
-                      </div>
-                      <div className="w-6 h-0.5 bg-cobalt rounded-full mt-1" />
-                      <div className="absolute -bottom-2 -right-2 px-2 py-0.5 rounded-md bg-cobalt text-white text-[10px] font-mono font-semibold shadow-sm">
-                        AI/ML
-                      </div>
-                    </div>
-
-                    <div className="font-heading font-semibold text-charcoal-900 text-base">
+                {/* Floating Nameplate & Active Status Card */}
+                <div className="absolute bottom-3 left-3 right-3 p-3.5 rounded-xl bg-canvas-surface/95 backdrop-blur-md border border-canvas-border text-left shadow-subtle flex items-center justify-between">
+                  <div>
+                    <div className="font-heading font-bold text-sm text-charcoal-900 leading-tight">
                       Krish Shah
                     </div>
-                    <div className="text-xs text-charcoal-500 mt-1 max-w-[220px]">
-                      DEPSTAR, Charusat University
+                    <div className="text-[11px] font-mono text-charcoal-500 mt-0.5">
+                      AI/ML • SDE Intern @ Bluestock
                     </div>
                   </div>
-                )}
-
-                {/* Footer Replacement Instruction Pill */}
-                <div className="w-full pt-3 border-t border-canvas-border/80 flex flex-col gap-2">
-                  <div className="text-[11px] text-charcoal-500 font-mono leading-tight">
-                    {useAvatar ? 'Displaying GitHub Profile Avatar' : 'Ready for your headshot photo'}
-                  </div>
                   
-                  {/* Quick Toggle for user convenience */}
-                  <button
-                    type="button"
-                    onClick={() => setUseAvatar(!useAvatar)}
-                    className="inline-flex items-center justify-center gap-1.5 py-1 px-2.5 rounded-md text-[11px] font-medium bg-canvas border border-canvas-border hover:border-cobalt text-charcoal-700 hover:text-cobalt transition-colors"
-                  >
-                    <ImageIcon className="w-3 h-3" />
-                    <span>{useAvatar ? 'Switch to Editorial Monogram' : 'Preview with GitHub Avatar'}</span>
-                  </button>
+                  <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-emerald-50 text-[10px] font-mono text-emerald-800 border border-emerald-200 shrink-0">
+                    <span className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-pulse" />
+                    <span>Active</span>
+                  </div>
                 </div>
 
               </div>
@@ -195,9 +159,9 @@ export const Hero: React.FC = () => {
               <div className="absolute -bottom-1.5 -right-1.5 w-3 h-3 border-b-2 border-r-2 border-charcoal-400" />
             </div>
 
-            {/* Quick Caption */}
-            <div className="text-[11px] text-charcoal-400 font-mono mt-3 text-center">
-              Replace file at <code className="text-charcoal-700 bg-canvas-subtle px-1 py-0.5 rounded">public/avatar.jpg</code> or toggle above
+            {/* Subtitle Caption */}
+            <div className="text-[11px] text-charcoal-500 font-mono mt-3 text-center">
+              Krish Shah • B.Tech IT (Charusat University)
             </div>
 
           </div>
